@@ -32,7 +32,12 @@ jobs:
                   echo "{\"repositoryName\": \"${{ github.repository }}\", \"commitSha\": \"${{ github.sha }}\", \"repositoryOwner\": \"${{ github.repository_owner }}\"}" > /tmp/plugin-info.json
                   mv plugin.json /tmp
                   jq -s '.[0] * .[1]' /tmp/plugin.json /tmp/plugin-info.json > plugin.json
-                  tar cf ../plugin.tar .
+                  tar -cf ../plugin.tar --exclude=node_modules
+            - name: Save Artifact
+              uses: actions/upload-artifact@v4
+              with:
+                  name: plugin-archive
+                  path: plugin.tar
             - name: Publish Plugin
               id: publish
               run: |
@@ -41,8 +46,4 @@ jobs:
                     exit 1
                   fi
                   curl -s --fail-with-body -XPOST 'https://node.windy.com/plugins/v1.0/upload' -H "x-windy-api-key: ${WINDY_API_KEY}" -F "plugin_archive=@plugin.tar"
-            - name: Save Artifact
-              uses: actions/upload-artifact@v4
-              with:
-                  name: plugin-archive
-                  path: plugin.tar
+
