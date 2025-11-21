@@ -5,13 +5,13 @@ const config: ExternalPluginConfig = {
     version: '0.0.1',
     icon: '✈️',
     title: 'SimBrief Route',
-    description: 'Display your latest SimBrief fligh plan on the map',
+    description: 'Display your latest SimBrief flight plan on the map',
     author: 'Neil Greatorex',
     repository: 'https://github.com/ngreatorex/windy-plugin-simbrief',
     desktopUI: 'embedded',
     mobileUI: 'fullscreen',
     routerPath: '/simbrief',
-    private: true,
+    private: false,
 };
 
 export default config;
