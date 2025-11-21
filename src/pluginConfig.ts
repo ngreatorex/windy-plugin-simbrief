@@ -2,7 +2,7 @@ import type { ExternalPluginConfig } from '@windy/interfaces';
 
 const config: ExternalPluginConfig = {
     name: 'windy-plugin-simbrief',
-    version: '0.0.1',
+    version: '0.0.2',
     icon: '✈️',
     title: 'SimBrief Route',
     description: 'Display your latest SimBrief flight plan on the map',

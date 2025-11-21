@@ -1,6 +1,6 @@
 {
     "name": "windy-plugin-simbrief",
-    "version": "0.0.1",
+    "version": "0.0.2",
     "description": "A Windy plugin to show your SimBrief flighplan on the map",
     "main": "dist/plugin.min.js",
     "type": "module",
