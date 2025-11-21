@@ -1,16 +1,16 @@
 import type { ExternalPluginConfig } from '@windy/interfaces';
 
 const config: ExternalPluginConfig = {
-    name: 'windy-plugin-my-plugin',
-    version: '0.1.0',
-    icon: '🔌',
-    title: 'This is my first plugin',
-    description: 'This is my first plugin.',
-    author: 'John Doe (optional company name)',
-    repository: 'https://github.com/windycom/windy-plugin-template',
-    desktopUI: 'rhpane',
+    name: 'windy-plugin-simbrief',
+    version: '0.0.1',
+    icon: '✈️',
+    title: 'SimBrief Route',
+    description: 'Display your latest SimBrief fligh plan on the map',
+    author: 'Neil Greatorex',
+    repository: 'https://github.com/ngreatorex/windy-plugin-simbrief',
+    desktopUI: 'embedded',
     mobileUI: 'fullscreen',
-    routerPath: '/my-plugin',
+    routerPath: '/simbrief',
     private: true,
 };
 
