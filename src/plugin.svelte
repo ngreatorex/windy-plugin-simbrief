@@ -261,6 +261,8 @@
             currentState = PluginState.Settings;
         } else {
             disableSubmitButton();
+            removeAllMapFeatures();
+
             currentState = PluginState.Loading;
             fetch(`https://www.simbrief.com/api/xml.fetcher.php?username=${currentSimbriefUsername}&json=v2`)
                 .then(response => response.json())
